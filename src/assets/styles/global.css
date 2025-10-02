@@ -1,0 +1,650 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles - updated for larger navbar */
+.header {
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 25px 0; /* Increased vertical padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px; /* Increased padding */
+}
+
+.logo a {
+  text-decoration: none;
+  color: #e63946;
+}
+
+.logo h1 {
+  font-size: 36px; /* Increased font size from 28px to 36px */
+  font-weight: 700;
+  letter-spacing: 1px; /* Added letter spacing for better appearance */
+}
+
+/* Navigation styles - updated for larger appearance */
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 25px; /* Increased spacing between nav items */
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px; /* Increased font size from default */
+  padding: 8px 15px; /* Increased padding around links */
+  transition: all 0.3s ease;
+}
+
+/* Ensure responsive design still works */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 25px; /* Slightly reduced for mobile but still larger than original */
+  }
+  
+  .logo h1 {
+    font-size: 32px; /* Slightly smaller on mobile but still larger than original */
+  }
+  
+  .navbar .nav-links a {
+    font-size: 17px;
+  }
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links a:hover, 
+.navbar .nav-links a.active {
+  color: #e63946;
+  border-bottom: 2px solid #e63946;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e63946;
+  border: 2px solid #e63946;
+}
+
+.btn-primary:hover {
+  background-color: #d62f3d;
+}
+
+.btn-secondary:hover {
+  background-color: #e63946;
+  color: #fff;
+}
+
+/* Banner styles */
+.banner {
+  height: 500px;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/HanRIVMTnllmc6z4b/videoblocks-23_09_k_81_indian_girls_performing_traditional_dance_rczt_4mbp_thumbnail-1080_02.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #e63946;
+  margin-bottom: 5px;
+}
+
+.author-role {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Courses */
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.course-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-title {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.course-description {
+  margin-bottom: 15px;
+}
+
+.course-details {
+  margin-bottom: 20px;
+}
+
+.course-btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 250px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Contact Page */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-form,
+.contact-info {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info h2 {
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Feedback */
+.feedback-form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.feedback-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.feedback-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.feedback-name {
+  color: #e63946;
+}
+
+.star {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.feedback-comment {
+  margin-bottom: 15px;
+}
+
+.feedback-date {
+  font-size: 14px;
+  color: #777;
+  text-align: right;
+}
+
+/* Fees Page */
+.fees-table-container {
+  overflow-x: auto;
+  margin: 40px 0;
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fees-table th,
+.fees-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.fees-table th {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.fees-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.payment-info,
+.scholarship-info {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.payment-info h2,
+.scholarship-info h2 {
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.payment-info ul {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+.payment-info li {
+  margin-bottom: 10px;
+}
+
+/* Enquiry Form */
+.enquiry-form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #e63946;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e63946;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  color: #e63946;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #555;
+}
+
+/* Main content area */
+.main-content {
+  min-height: calc(100vh - 200px);
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page titles */
+.page-title {
+  margin-bottom: 20px;
+  color: #e63946;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* Section styling */
+.section {
+  padding: 60px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .banner h1 {
+    font-size: 36px;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  .navbar .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 100;
+    display: none;
+  }
+  
+  .navbar .nav-links.active {
+    display: flex;
+  }
+  
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .banner {
+    height: 400px;
+  }
+  
+  .banner h1 {
+    font-size: 30px;
+  }
+  
+  .banner-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .features-grid,
+  .testimonials-grid,
+  .courses-list,
+  .gallery-grid,
+  .feedback-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-logo, .footer-links, .footer-contact {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
